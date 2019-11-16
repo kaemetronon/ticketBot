@@ -1,0 +1,1 @@
+parses investing.com and gets some stock quotes
