@@ -2,20 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dc76b60-c7af-42df-8ae6-5b86038bff59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/bot.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/bot-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/bot-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/Handler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Handler$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/Handler$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Handler$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/service/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Handler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/View.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/View.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="ticketBot" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -140,7 +145,10 @@
       <workItem from="1573906681039" duration="704000" />
       <workItem from="1573909173162" duration="14289000" />
       <workItem from="1574065084365" duration="640000" />
-      <workItem from="1574067156911" duration="565000" />
+      <workItem from="1574067156911" duration="1183000" />
+      <workItem from="1574079649346" duration="326000" />
+      <workItem from="1574096612467" duration="851000" />
+      <workItem from="1574192238191" duration="295000" />
     </task>
     <servers />
   </component>

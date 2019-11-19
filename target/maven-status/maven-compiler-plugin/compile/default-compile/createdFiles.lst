@@ -1,5 +1,10 @@
+model\Command.class
 Main.class
+BatBot.class
+service\Handler$1.class
+model\Ticket.class
+service\Handler$2.class
 service\Request.class
 service\Handler.class
 service\View.class
-BatBot.class
+service\Calculator.class

@@ -9,6 +9,7 @@ public class View {
 
     private Float percent;
     private Float amount;
+    private StringBuilder sb;
 
     //for one
     public String setFloatsAndFormat(Float[] percentAndAmount) {
@@ -18,8 +19,9 @@ public class View {
     }
 
     //for all
-    public String setFloatsAndFormat(Float amount) {
+    public String setFloatsAndFormat(StringBuilder sb) {
         this.amount = amount;
+        this.sb = sb;
         return format();
     }
 
@@ -35,12 +37,17 @@ public class View {
     }
 
     public String format() {
-        StringBuilder builder = new StringBuilder();
-        if (percent != null) {
-            builder.append("Percent: " + percent.toString());
-            builder.append("\n");
-        }
-        builder.append("Amount: " + amount.toString());
-        return builder.toString();
+            StringBuilder builder = new StringBuilder();
+            if (percent != null) {
+                builder.append("Percent: " + percent.toString());
+                builder.append("\n");
+                builder.append("Amount: " + amount.toString());
+            }
+            else {
+                builder.append(sb);
+            }
+            return builder.toString();
+
     }
+
 }

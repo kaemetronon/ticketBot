@@ -25,7 +25,6 @@ public class Handler {
                 Float moexBuyCourse = 95.53F;
                 Float rstiBuyCourse = 1.2436F;
                 Float fxgdBuyCourse = 662.1F;
-                //!!!!!!!
                 Float dskyBuyCourse = 92.88F;
 
                 Integer moexStocksNumber = 20;
@@ -99,6 +98,8 @@ public class Handler {
             case ALL: {
                 request = new Request();
                 Float counter = 0F;
+                StringBuilder sb = new StringBuilder();
+                Float temp;
                 for (Ticket ticket : ticketList) {
                     if (!ticket.getTitle().equals("ALL")) {
 
@@ -109,13 +110,16 @@ public class Handler {
                         calculator.setTempCourse(tempCourse);
                         calculator.setStocksNumber(ticket.getStocksNumber());
 
-                        counter += calculator.getPercentAndAmount()[1];
-                        System.out.println(counter);
+                        temp = calculator.getPercentAndAmount()[1];
+                        counter += temp;
+
+                        sb.append(ticket.getTitle() + ": " + temp + "\n");
                     }
                 }
                 counter = Float.valueOf(Math.round(counter * 10000));
                 counter /= 10000;
-                return view.setFloatsAndFormat(counter);
+                sb.append("Amount: " + counter);
+                return view.setFloatsAndFormat(sb);
             }
             case LIST: {
                 return view.setListAndGetView(ticketList);
