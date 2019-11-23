@@ -7,51 +7,21 @@ import java.util.ArrayList;
 
 public class Handler {
 
-    static ArrayList<Ticket> ticketList;
-
-    static {
-        ticketList = new ArrayList<Ticket>() {
-            {
-                String moexTitle = "MOEX";
-                String rstiTitle = "RSTI";
-                String fxgdTitle = "FXGD";
-                String dskyTitle = "DSKY";
-
-                String moexUrl = "https://www.investing.com/equities/moskovskaya-birzha-oao";
-                String rstiUrl = "https://www.investing.com/equities/rosseti-ao";
-                String fxgdUrl = "https://www.investing.com/etfs/finex-physically-held-gold-usd";
-                String dskyUrl = "https://www.investing.com/equities/detskiy-mir-pao";
-
-                Float moexBuyCourse = 95.53F;
-                Float rstiBuyCourse = 1.2436F;
-                Float fxgdBuyCourse = 662.1F;
-                Float dskyBuyCourse = 92.88F;
-
-                Integer moexStocksNumber = 20;
-                Integer rstiStocksNumber = 1000;
-                Integer fxgdStocksNumber = 2;
-                Integer dskyStockNumber = 20;
-
-                add(new Ticket(moexTitle, moexUrl, moexBuyCourse, moexStocksNumber));
-                add(new Ticket(rstiTitle, rstiUrl, rstiBuyCourse, rstiStocksNumber));
-                add(new Ticket(fxgdTitle, fxgdUrl, fxgdBuyCourse, fxgdStocksNumber));
-                add(new Ticket(dskyTitle, dskyUrl, dskyBuyCourse, dskyStockNumber));
-            }
-        };
-    }
-
     private Request request;
     private Calculator calculator;
     private Ticket ticket;
     private View view;
     private Float tempCourse;
     private Command command;
+    private SingletonList singletonList;
 
     private boolean isCorrect;
     private Float[] percentAndAmount;
     private String message;
+    private ArrayList<Ticket> ticketList;
 
     public Handler(String text) {
+        ticketList = SingletonList.getArrayList();
         handleText(text);
     }
 
@@ -124,7 +94,8 @@ public class Handler {
             case LIST: {
                 return view.setListAndGetView(ticketList);
             }
-            default: return null;
+            default:
+                return null;
         }
     }
 
