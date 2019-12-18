@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dc76b60-c7af-42df-8ae6-5b86038bff59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/SingletonList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/ticketBot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/toDo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Calculator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Handler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/bot.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Calculator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/Handler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/Handler.class" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,7 +45,13 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -49,22 +62,10 @@
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="bot" />
+      <module name="ticketBot" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,6 +123,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -146,6 +159,7 @@
       <workItem from="1574192238191" duration="295000" />
       <workItem from="1574227564920" duration="24000" />
       <workItem from="1574474155095" duration="1076000" />
+      <workItem from="1576689449356" duration="1559000" />
     </task>
     <servers />
   </component>
@@ -164,6 +178,36 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="409" y="51" key="#Main" timestamp="1576690760332">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="409" y="51" key="#Main/0.0.1366.768@0.0.1366.768" timestamp="1576690760332" />
+    <state x="454" y="192" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1576690986168">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="454" y="192" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1576690986168" />
+    <state x="534" y="274" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576689494533">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="534" y="274" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.768@0.0.1366.768" timestamp="1576689494533" />
+    <state width="1322" height="329" key="GridCell.Tab.0.bottom" timestamp="1576691017480">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="329" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1576691017480" />
+    <state width="1322" height="329" key="GridCell.Tab.0.center" timestamp="1576691017480">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="329" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1576691017480" />
+    <state width="1322" height="329" key="GridCell.Tab.0.left" timestamp="1576691017480">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="329" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1576691017480" />
+    <state width="1322" height="329" key="GridCell.Tab.0.right" timestamp="1576691017480">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="329" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1576691017480" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

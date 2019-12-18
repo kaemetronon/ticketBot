@@ -13,7 +13,7 @@ public class Ticket {
     public Ticket(String title, String url, Float buyCourse, Integer stocksNumber) {
         this.title = title;
         this.url = url;
-        this.buyCourse = buyCourse;
+        this.buyCourse = (float) Math.round(buyCourse * 100)/100;
         this.stocksNumber = stocksNumber;
     }
 

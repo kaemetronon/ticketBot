@@ -12,8 +12,8 @@ public class Calculator {
     private void calculatePercent() {
 
         percent = 100 + buyCourse / tempCourse * (-100);
-        percent = Float.valueOf(Math.round(percent * 10000));
-        percent /= 10000;
+        percent = Float.valueOf(Math.round(percent * 100));
+        percent /= 100;
         amount = percent * buyCourse * stocksNumber / 100;
     }
 

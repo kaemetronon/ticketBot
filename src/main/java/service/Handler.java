@@ -69,7 +69,7 @@ public class Handler {
                 request = new Request();
                 Float counter = 0F;
                 StringBuilder sb = new StringBuilder();
-                Float temp;
+                Float[] concretePercentAndAmount = new Float[2];
                 for (Ticket ticket : ticketList) {
                     if (!ticket.getTitle().equals("ALL")) {
 
@@ -80,10 +80,12 @@ public class Handler {
                         calculator.setTempCourse(tempCourse);
                         calculator.setStocksNumber(ticket.getStocksNumber());
 
-                        temp = calculator.getPercentAndAmount()[1];
-                        counter += temp;
+                        concretePercentAndAmount = calculator.getPercentAndAmount();
 
-                        sb.append(ticket.getTitle() + ": " + temp + "\n");
+                        counter += concretePercentAndAmount[1];
+
+                        sb.append(ticket.getTitle() + ": " + concretePercentAndAmount[1] + " "
+                                + concretePercentAndAmount[0] + "%" + "\n");
                     }
                 }
                 counter = Float.valueOf(Math.round(counter * 10000));
