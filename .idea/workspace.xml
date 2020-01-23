@@ -2,34 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5dc76b60-c7af-42df-8ae6-5b86038bff59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/exceptions/UncorrectInputDataException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entities/Bond.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entities/Cash.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/entities/ETF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ViewMaker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/handler/CommandDeterminator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BatBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BatBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Stock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/handler/Calculator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/handler/Handler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RequestMaker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/SingletonList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SingletonList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/View.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BatBot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BatBot.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Command.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Ticket.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/Calculator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/Handler$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/Handler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/Request.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/SingletonList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/SingletonList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Cash.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Cash.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/ETF.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/ETF.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Stock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Stock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ViewMaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ViewMaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/handler/Handler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/handler/Handler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/toDo" beforeDir="false" afterPath="$PROJECT_DIR$/toDo" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -134,7 +112,7 @@
       <workItem from="1576752915498" duration="5265000" />
       <workItem from="1576862228321" duration="348000" />
       <workItem from="1579531660499" duration="11380000" />
-      <workItem from="1579720531217" duration="8361000" />
+      <workItem from="1579720531217" duration="10559000" />
     </task>
     <servers />
   </component>
@@ -167,6 +145,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="454" y="192" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1576690986168" />
+    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser" timestamp="1579740682215">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="488" y="75" key="#com.intellij.ide.util.MemberChooser/0.0.1366.768@0.0.1366.768" timestamp="1579740682215" />
     <state x="534" y="274" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1579531701162">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -179,26 +161,46 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="140" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1579739928065" />
-    <state width="1322" height="303" key="GridCell.Tab.0.bottom" timestamp="1576758243394">
+    <state width="1322" height="244" key="GridCell.Tab.0.bottom" timestamp="1579742422025">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="303" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1576758243394" />
-    <state width="1322" height="303" key="GridCell.Tab.0.center" timestamp="1576758243394">
+    <state width="1322" height="244" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579742422025" />
+    <state width="1322" height="244" key="GridCell.Tab.0.center" timestamp="1579742422025">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="303" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1576758243394" />
-    <state width="1322" height="303" key="GridCell.Tab.0.left" timestamp="1576758243394">
+    <state width="1322" height="244" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1579742422025" />
+    <state width="1322" height="244" key="GridCell.Tab.0.left" timestamp="1579742422025">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="303" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1576758243394" />
-    <state width="1322" height="303" key="GridCell.Tab.0.right" timestamp="1576758243394">
+    <state width="1322" height="244" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1579742422025" />
+    <state width="1322" height="244" key="GridCell.Tab.0.right" timestamp="1579742422025">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1322" height="303" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1576758243394" />
+    <state width="1322" height="244" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1579742422025" />
+    <state width="1322" height="232" key="GridCell.Tab.1.bottom" timestamp="1579742377130">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="232" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1579742377130" />
+    <state width="1322" height="232" key="GridCell.Tab.1.center" timestamp="1579742377130">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="232" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1579742377130" />
+    <state width="1322" height="232" key="GridCell.Tab.1.left" timestamp="1579742377130">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="232" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1579742377130" />
+    <state width="1322" height="232" key="GridCell.Tab.1.right" timestamp="1579742377130">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state width="1322" height="232" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1579742377130" />
     <state x="213" y="40" key="Maven.ArtifactSearchDialog" timestamp="1579722967149">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="213" y="40" key="Maven.ArtifactSearchDialog/0.0.1366.768@0.0.1366.768" timestamp="1579722967149" />
+    <state x="275" y="118" key="Vcs.Push.Dialog.v2" timestamp="1579740628677">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="275" y="118" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1579740628677" />
     <state x="65" y="87" key="new project wizard" timestamp="1576862596326">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

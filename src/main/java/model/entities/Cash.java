@@ -8,8 +8,8 @@ import model.Entity;
 @AllArgsConstructor
 public class Cash implements Entity {
 
-    private final String title;
-    private final Float amount;
+    private String title;
+    private Float amount;
 
     @Override
     public Integer getItemsNumber() {
@@ -22,5 +22,5 @@ public class Cash implements Entity {
     }
 
     @Override
-    public Float getBuyCourse() { return null;}
+    public Float getBuyCourse() { return amount;}
 }

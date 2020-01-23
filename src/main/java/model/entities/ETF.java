@@ -8,8 +8,8 @@ import model.Entity;
 @AllArgsConstructor
 public class ETF implements Entity {
 
-    private final String title;
-    private final String url;
-    private final Float buyCourse;
-    private final Integer itemsNumber;
+    private String title;
+    private String url;
+    private Float buyCourse;
+    private Integer itemsNumber;
 }

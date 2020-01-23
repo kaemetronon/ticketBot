@@ -53,16 +53,17 @@ public class Handler {
             case STOCKS: {
                 ArrayList<Stock> stockList = new ArrayList<>();
                 for (Entity entity1 : entityList) {
-                    if (entity1.getClass().getSimpleName().toUpperCase().equals("STOCK")) ;
-                    stockList.add((Stock) entity1);
+                    if (entity1.getClass().getSimpleName().toUpperCase().equals("STOCK")) {
+                        stockList.add((Stock) entity1);
+                    }
                 }
-
                 for (Stock stock : stockList) {
-                    request = new RequestMaker(stock.getUrl);
-                    calculator = new Calculator(stock.getBuyCourse, request.getCourse(), stock.getStocksNumber);
+                    request = new RequestMaker(stock.getUrl());
+                    calculator = new Calculator(stock.getBuyCourse(), request.getCourse(), stock.getItemsNumber());
                     result = calculator.getPercentAndProfit();
                     profitCounter += result[0];
-                    resultMap.put(stock.getTitle, result);
+                    resultMap.put(stock.getTitle(), result);
+                    System.out.println(stock.getTitle() + " completed\n");
                 }
                 view = new ViewMaker(resultMap, profitCounter);
                 return view.format();
@@ -75,11 +76,11 @@ public class Handler {
                 }
 
                 for (ETF etf : etfList) {
-                    request = new RequestMaker(etf.getUrl);
-                    calculator = new Calculator(etf.getBuyCourse, request.getCourse(), etf.getStocksNumber);
+                    request = new RequestMaker(etf.getUrl());
+                    calculator = new Calculator(etf.getBuyCourse(), request.getCourse(), etf.getItemsNumber());
                     result = calculator.getPercentAndProfit();
                     profitCounter += result[0];
-                    resultMap.put(etf.getTitle, result);
+                    resultMap.put(etf.getTitle(), result);
                 }
                 view = new ViewMaker(resultMap, profitCounter);
                 return view.format();
@@ -91,7 +92,7 @@ public class Handler {
             case CASH: {
                 Cash cash = null;
                 for (Entity isCash : entityList) {
-                    if (isCash.getTitle.toUpperCase.equals("CASh")) {
+                    if (isCash.getTitle().equals("CASH")) {
                         cash = (Cash) isCash;
                     }
                 }
@@ -102,14 +103,14 @@ public class Handler {
                 Float cashExists = 0F;
                 for (Entity entity : entityList) {
                     if (entity.getUrl() == null) {
-                        cashExists = (Cash) entity.getAmount();
+                        cashExists = entity.getBuyCourse();
                         continue;
                     }
-                    request = new RequestMaker(entity.getUrl);
-                    calculator = new Calculator(entity.getBuyCourse, request.getCourse(), entity.getItemsNumber());
+                    request = new RequestMaker(entity.getUrl());
+                    calculator = new Calculator(entity.getBuyCourse(), request.getCourse(), entity.getItemsNumber());
                     result = calculator.getPercentAndProfit();
                     profitCounter += result[0];
-                    resultMap.put(entity.getTitle, result);
+                    resultMap.put(entity.getTitle(), result);
                 }
                 if (cashExists != 0) {
                     view = new ViewMaker(resultMap, profitCounter, cashExists);
@@ -133,8 +134,8 @@ public class Handler {
         Calculator calculator;
         Float[] result;
 
-        request = new RequestMaker(entity.getUrl);
-        calculator = new Calculator(entity.getBuyCourse, request.getCourse(), entity.getStocksNumber);
+        request = new RequestMaker(entity.getUrl());
+        calculator = new Calculator(entity.getBuyCourse(), request.getCourse(), entity.getItemsNumber());
         result = calculator.getPercentAndProfit();
 
         view = new ViewMaker();

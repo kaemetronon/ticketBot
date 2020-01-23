@@ -35,6 +35,7 @@ public class ViewMaker {
     }
 
     public StringBuilder format1Entity(String title, Float[] profitAndPercent) {
+        builder = new StringBuilder();
         builder.append(title)
                 .append(" - ")
                 .append(round(profitAndPercent[0]))
@@ -46,10 +47,12 @@ public class ViewMaker {
     }
 
     public String format4List(ArrayList<Entity> entityList) {
+        builder = new StringBuilder();
         for (Entity entity : entityList) {
             builder.append(entity.getTitle().toUpperCase())
                     .append(", ");
         }
+        builder.setLength(builder.length() - 2);
         builder.append(".\n");
         return builder.toString();
     }
