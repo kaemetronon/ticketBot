@@ -1,21 +1,24 @@
-package service;
+package model;
 
-import model.Ticket;
+import model.entities.Cash;
+import model.entities.ETF;
+import model.entities.Stock;
 
 import java.util.ArrayList;
 
 public class SingletonList {
 
-    private static ArrayList<Ticket> ticketList;
+    private static ArrayList<Entity> ticketList;
 
-    public static ArrayList<Ticket> getArrayList() {
+    public static ArrayList<Entity> getArrayList() {
         if (ticketList == null) {
-            ticketList = new ArrayList<Ticket>() {
+            ticketList = new ArrayList<Entity>() {
                 {
                     String moexTitle = "MOEX";
                     String rstiTitle = "RSTI";
                     String fxgdTitle = "FXGD";
                     String dskyTitle = "DSKY";
+                    String cashTitle = "CASH";
 
                     String moexUrl = "https://www.investing.com/equities/moskovskaya-birzha-oao";
                     String rstiUrl = "https://www.investing.com/equities/rosseti-ao";
@@ -26,16 +29,18 @@ public class SingletonList {
                     Float rstiBuyCourse = 1.2436F;
                     Float fxgdBuyCourse = 662.1F;
                     Float dskyBuyCourse = 92.88F;
+                    Float cashAmount = 6642.82F;
 
                     Integer moexStocksNumber = 20;
                     Integer rstiStocksNumber = 1000;
                     Integer fxgdStocksNumber = 2;
                     Integer dskyStockNumber = 20;
 
-                    add(new Ticket(moexTitle, moexUrl, moexBuyCourse, moexStocksNumber));
-                    add(new Ticket(rstiTitle, rstiUrl, rstiBuyCourse, rstiStocksNumber));
-                    add(new Ticket(fxgdTitle, fxgdUrl, fxgdBuyCourse, fxgdStocksNumber));
-                    add(new Ticket(dskyTitle, dskyUrl, dskyBuyCourse, dskyStockNumber));
+                    add(new Stock(moexTitle, moexUrl, moexBuyCourse, moexStocksNumber));
+                    add(new Stock(rstiTitle, rstiUrl, rstiBuyCourse, rstiStocksNumber));
+                    add(new Stock(dskyTitle, dskyUrl, dskyBuyCourse, dskyStockNumber));
+                    add(new ETF(fxgdTitle, fxgdUrl, fxgdBuyCourse, fxgdStocksNumber));
+                    add(new Cash(cashTitle, cashAmount));
                 }
             };
         }

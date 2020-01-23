@@ -2,7 +2,7 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import service.Handler;
+import service.handler.Handler;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,9 +18,7 @@ public class BatBot extends TelegramLongPollingBot {
             String response;
 
             Handler handler = new Handler(update.getMessage().getText());
-            if (handler.getCorrect())
-                response = handler.action();
-            else response = handler.getMessage();
+            response = handler.action();
 
             SendMessage message = new SendMessage()
                     .setChatId(chat_id)
@@ -32,7 +30,6 @@ public class BatBot extends TelegramLongPollingBot {
             }
         }
     }
-
 
     private String getAccessToken() {
         Properties prop = new Properties();
@@ -57,7 +54,7 @@ public class BatBot extends TelegramLongPollingBot {
             username = prop.getProperty("username");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Ошибка при загрузке файда конфигурации");
+            System.out.println("Ошибка при загрузке файла конфигурации");
         }
         return username;
     }

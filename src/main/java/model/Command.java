@@ -1,5 +1,6 @@
 package model;
 
 public enum Command {
-    TICKET, ALL, LIST
+    STOCKS, ETFS, BONDS, CASH, ALL, LIST,
+    ONE_STOCK, ONE_ETF, ONE_BOND
 }

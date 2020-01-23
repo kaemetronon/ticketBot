@@ -6,18 +6,17 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-public class Request {
+public class RequestMaker {
 
-    private String index;
+    private String url;
 
-    public Float setUrlAndGetCourse(String index) {
-        this.index = index;
-        return getCourse();
+    public RequestMaker(String url) {
+        this.url = url;
     }
 
-    private Float getCourse() {
+    public Float getCourse() {
         try {
-            Document doc = Jsoup.connect(index).get();
+            Document doc = Jsoup.connect(url).get();
             Elements elements = doc.select("div#quotes_summary_current_data.instrumentDataFlex");
             return Float.valueOf(elements.text().split("\\s")[0]);
         } catch (IOException e) {return 0F;}
