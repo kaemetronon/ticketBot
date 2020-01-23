@@ -27,6 +27,7 @@ public class Handler {
             CommandDeterminator.determinate(text);
         } catch (UncorrectInputDataException e) {
             e.printStackTrace();
+            System.err.println("Input: " + text);
             exceptionExists = true;
         }
         command = CommandDeterminator.getCommand();
@@ -69,6 +70,7 @@ public class Handler {
                     System.out.println(stock.getTitle() + " completed");
                 }
                 view = new ViewMaker(resultMap, profitCounter);
+                System.out.println("Done");
                 return view.format();
             }
             case ETFS: {
@@ -85,8 +87,10 @@ public class Handler {
                     result = calculator.getPercentAndProfit();
                     profitCounter += result[0];
                     resultMap.put(etf.getTitle(), result);
+                    System.out.println(etf.getTitle() + " completed");
                 }
                 view = new ViewMaker(resultMap, profitCounter);
+                System.out.println("Done");
                 return view.format();
             }
             case BONDS: {
@@ -96,7 +100,7 @@ public class Handler {
             case CASH: {
                 Cash cash = null;
                 for (Entity isCash : entityList) {
-                    if (isCash.getTitle().equals("CASH")) {
+                    if (isCash.getTitle().toUpperCase().equals("CASH")) {
                         cash = (Cash) isCash;
                     }
                 }
@@ -115,12 +119,14 @@ public class Handler {
                     result = calculator.getPercentAndProfit();
                     profitCounter += result[0];
                     resultMap.put(entity.getTitle(), result);
+                    System.out.println(entity.getTitle() + " completed");
                 }
                 if (cashExists != 0) {
                     view = new ViewMaker(resultMap, profitCounter, cashExists);
                 } else {
                     view = new ViewMaker(resultMap, profitCounter);
                 }
+                System.out.println("Done");
                 return view.format();
             }
             case LIST: {

@@ -3,7 +3,12 @@ package model;
 import model.entities.Cash;
 import model.entities.ETF;
 import model.entities.Stock;
+import org.checkerframework.checker.units.qual.A;
+import org.xml.sax.SAXException;
+import service.xmlParsing.XmlParser;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class SingletonList {
@@ -12,38 +17,39 @@ public class SingletonList {
 
     public static ArrayList<Entity> getArrayList() {
         if (ticketList == null) {
-            ticketList = new ArrayList<Entity>() {
-                {
-                    String moexTitle = "MOEX";
-                    String rstiTitle = "RSTI";
-                    String fxgdTitle = "FXGD";
-                    String dskyTitle = "DSKY";
-                    String cashTitle = "CASH";
 
-                    String moexUrl = "https://www.investing.com/equities/moskovskaya-birzha-oao";
-                    String rstiUrl = "https://www.investing.com/equities/rosseti-ao";
-                    String fxgdUrl = "https://www.investing.com/etfs/finex-physically-held-gold-usd";
-                    String dskyUrl = "https://www.investing.com/equities/detskiy-mir-pao";
+            ticketList = new ArrayList<Entity>();
 
-                    Float moexBuyCourse = 95.53F;
-                    Float rstiBuyCourse = 1.2436F;
-                    Float fxgdBuyCourse = 662.1F;
-                    Float dskyBuyCourse = 92.88F;
-                    Float cashAmount = 6642.82F;
+            XmlParser parser = null;
+            try {
+                parser = new XmlParser();
+            } catch (ParserConfigurationException | IOException | SAXException e) {
+                e.printStackTrace();
+            }
 
-                    Integer moexStocksNumber = 20;
-                    Integer rstiStocksNumber = 1000;
-                    Integer fxgdStocksNumber = 2;
-                    Integer dskyStockNumber = 20;
+            ArrayList<Entity> entities = new ArrayList<>();
 
-                    add(new Stock(moexTitle, moexUrl, moexBuyCourse, moexStocksNumber));
-                    add(new Stock(rstiTitle, rstiUrl, rstiBuyCourse, rstiStocksNumber));
-                    add(new Stock(dskyTitle, dskyUrl, dskyBuyCourse, dskyStockNumber));
-                    add(new ETF(fxgdTitle, fxgdUrl, fxgdBuyCourse, fxgdStocksNumber));
-                    add(new Cash(cashTitle, cashAmount));
-                }
-            };
+            entities.addAll(parser.getStocks());
+            if (!entities.isEmpty()) {
+                ticketList.addAll(entities);
+                entities.clear();
+            }
+            entities.addAll(parser.getEtfs());
+            if (!entities.isEmpty()) {
+                ticketList.addAll(entities);
+                entities.clear();
+            }
+//            entities.addAll(parser.getBonds());
+//            if (!entities.isEmpty()) {
+//                ticketList.addAll(entities);
+//                entities.clear();
+//            }
+            entities.add(parser.getCash());
+            if (!entities.isEmpty()) {
+                ticketList.addAll(entities);
+                entities.clear();
+            }
         }
-            return ticketList;
+        return ticketList;
     }
 }

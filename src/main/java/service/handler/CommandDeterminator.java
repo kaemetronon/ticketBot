@@ -48,7 +48,6 @@ public class CommandDeterminator {
                         command = Command.ONE_ITEM;
                     }
                 }
-                command = null;
             }
         }
         if (command == null) throw new UncorrectInputDataException();
