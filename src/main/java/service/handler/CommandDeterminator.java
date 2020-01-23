@@ -14,7 +14,7 @@ public class CommandDeterminator {
 
     public static void determinate(String text) throws UncorrectInputDataException {
 //        STOCKS, ETFS, BONDS, CASH, ALL, LIST,
-//        ONE_STOCK, ONE_ETF, ONE_BOND
+//        ONE_ITEM
         switch (text.toUpperCase()) {
             case "STOCKS": {
                 command = Command.STOCKS;
@@ -43,10 +43,12 @@ public class CommandDeterminator {
             default: {
                 ArrayList<Entity> entityList = SingletonList.getArrayList();
                 for (Entity concreteEntity : entityList) {
-                    if (entity.getTitle().equals(text.toUpperCase())) {
+                    if (concreteEntity.getTitle().equals(text.toUpperCase())) {
                         entity = concreteEntity;
+                        command = Command.ONE_ITEM;
                     }
                 }
+                command = null;
             }
         }
         if (command == null) throw new UncorrectInputDataException();

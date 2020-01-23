@@ -12,7 +12,8 @@ public class ViewMaker {
     private Map<String, Float[]> percentMap;
     private Float totalProfit;
     private Float cashAmount;
-    StringBuilder builder;
+    StringBuilder tempBuilder = new StringBuilder();
+    StringBuilder resultBuilder = new StringBuilder();
 
     public ViewMaker() {
     }
@@ -35,53 +36,52 @@ public class ViewMaker {
     }
 
     public StringBuilder format1Entity(String title, Float[] profitAndPercent) {
-        builder = new StringBuilder();
-        builder.append(title)
-                .append(" - ")
+
+        tempBuilder.append(title)
+                .append(": ")
                 .append(round(profitAndPercent[0]))
                 .append("₽ ")
                 .append(round(profitAndPercent[1]))
                 .append("%")
                 .append("\n");
-        return builder;
+        return tempBuilder;
     }
 
     public String format4List(ArrayList<Entity> entityList) {
-        builder = new StringBuilder();
         for (Entity entity : entityList) {
-            builder.append(entity.getTitle().toUpperCase())
+            tempBuilder.append(entity.getTitle().toUpperCase())
                     .append(", ");
         }
-        builder.setLength(builder.length() - 2);
-        builder.append(".\n");
-        return builder.toString();
+        tempBuilder.setLength(tempBuilder.length() - 2);
+        tempBuilder.append(".\n");
+        return tempBuilder.toString();
     }
 
     public String format4Cash(Float amount) {
-        builder = new StringBuilder();
-        builder.append("Free cash - ")
+        tempBuilder.append("Free cash - ")
                 .append(round(amount));
-        return builder.toString();
+        return tempBuilder.toString();
     }
 
     public String format() {
-        builder = new StringBuilder();
 
         for (Map.Entry<String, Float[]> titlesProfitsPercents : percentMap.entrySet()) {
-            Float[] profitAndPercent = titlesProfitsPercents.getValue();
-            builder.append(format1Entity(titlesProfitsPercents.getKey()
-                    , titlesProfitsPercents.getValue()));
+            format1Entity(titlesProfitsPercents.getKey()
+                    , titlesProfitsPercents.getValue());
+
+            resultBuilder.append(tempBuilder);
+            tempBuilder.setLength(0);
         }
 
-        builder.append("Total profit: ")
-                .append(totalProfit)
+        resultBuilder.append("Total profit: ")
+                .append(round(totalProfit))
                 .append("₽ ")
                 .append("\n");
 
-        if (cashAmount != 0) {
-            builder.append(format4Cash(cashAmount));
+        if (cashAmount != null) {
+            resultBuilder.append(format4Cash(cashAmount));
         }
 
-        return builder.toString();
+        return resultBuilder.toString();
     }
 }

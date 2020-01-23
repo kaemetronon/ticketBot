@@ -15,7 +15,7 @@ public class Calculator {
     }
 
     private void calculatePercent() {
-        percent = 100 + buyCourse / tempCourse * (-100);
+        percent = tempCourse / buyCourse * 100 - 100;
         profit = percent * buyCourse * stocksNumber / 100;
     }
 

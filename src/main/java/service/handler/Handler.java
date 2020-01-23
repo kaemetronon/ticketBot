@@ -18,6 +18,7 @@ public class Handler {
 
     private Command command;
     private Entity entity;
+    boolean exceptionExists;
 
     private ArrayList<Entity> entityList;
 
@@ -26,6 +27,7 @@ public class Handler {
             CommandDeterminator.determinate(text);
         } catch (UncorrectInputDataException e) {
             e.printStackTrace();
+            exceptionExists = true;
         }
         command = CommandDeterminator.getCommand();
         entity = CommandDeterminator.getEntity();
@@ -33,6 +35,7 @@ public class Handler {
     }
 
     public String action() {
+        if (exceptionExists) return "Uncorrect data.";
         if (entity == null)
             return notCertainTitket();
         else
@@ -63,7 +66,7 @@ public class Handler {
                     result = calculator.getPercentAndProfit();
                     profitCounter += result[0];
                     resultMap.put(stock.getTitle(), result);
-                    System.out.println(stock.getTitle() + " completed\n");
+                    System.out.println(stock.getTitle() + " completed");
                 }
                 view = new ViewMaker(resultMap, profitCounter);
                 return view.format();
@@ -71,8 +74,9 @@ public class Handler {
             case ETFS: {
                 ArrayList<ETF> etfList = new ArrayList<>();
                 for (Entity entity1 : entityList) {
-                    if (entity1.getClass().getSimpleName().toUpperCase().equals("ETF")) ;
-                    etfList.add((ETF) entity1);
+                    if (entity1.getClass().getSimpleName().toUpperCase().equals("ETF")) {
+                        etfList.add((ETF) entity1);
+                    }
                 }
 
                 for (ETF etf : etfList) {
@@ -87,7 +91,7 @@ public class Handler {
             }
             case BONDS: {
                 // TODO: 22.01.2020
-                return null;
+                return "will be added in future releases";
             }
             case CASH: {
                 Cash cash = null;
