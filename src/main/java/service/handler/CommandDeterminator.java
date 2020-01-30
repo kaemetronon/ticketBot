@@ -15,6 +15,8 @@ public class CommandDeterminator {
     public static void determinate(String text) throws UncorrectInputDataException {
 //        STOCKS, ETFS, BONDS, CASH, ALL, LIST,
 //        ONE_ITEM
+        command = null;
+        entity = null;
         switch (text.toUpperCase()) {
             case "STOCKS": {
                 command = Command.STOCKS;

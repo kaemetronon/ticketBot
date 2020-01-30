@@ -147,6 +147,7 @@ public class Handler {
         request = new RequestMaker(entity.getUrl());
         calculator = new Calculator(entity.getBuyCourse(), request.getCourse(), entity.getItemsNumber());
         result = calculator.getPercentAndProfit();
+        System.out.println(entity.getTitle() + "completed");
 
         view = new ViewMaker();
         return view.format1Entity(entity.getTitle(), result).toString();
