@@ -2,25 +2,29 @@
     <stocks>
         <stock title = "MOEX"
                url = "https://www.investing.com/equities/moskovskaya-birzha-oao"
-               buyCourse = "95.53"
+               buyCourse = "95.5345"
                itemNumber = "20" />
         <stock title = "RSTI"
                url = " https://www.investing.com/equities/rosseti-ao"
-               buyCourse = "1.2436"
+               buyCourse = "1.24364"
                itemNumber = "1000" />
         <stock title = "DSKY"
                url = "https://www.investing.com/equities/detskiy-mir-pao"
-               buyCourse = "92.88"
+               buyCourse = "92.944"
                itemNumber = "20" />
+        <stock title = "AQUA"
+               url = "https://www.investing.com/equities/russian-sea-group"
+               buyCourse = "319.722"
+               itemNumber = "10" />
     </stocks>
     <etfs>
         <etf title = "FXGD"
              url = "https://www.investing.com/etfs/finex-physically-held-gold-usd"
-             buyCourse = "662.1"
+             buyCourse = "662.065"
              itemNumber = "2" />
     </etfs>
     <bonds>
         <!-- still empty-->
     </bonds>
-    <cash amount = "6642.82" />
+    <cash amount = "3446.60" />
 </entity>

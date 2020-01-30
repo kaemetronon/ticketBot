@@ -40,7 +40,7 @@ public class BatBot extends TelegramLongPollingBot {
             accessToken = prop.getProperty("token");
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Ошибка при загрузке файда конфигурации");
+            System.out.println("Ошибка при загрузке файла конфигурации");
         }
         return accessToken;
     }
