@@ -20,11 +20,11 @@
     <etfs>
         <etf title = "FXGD"
              url = "https://www.investing.com/etfs/finex-physically-held-gold-usd"
-             buyCourse = "662.065"
+             buyCourse = "684.3"
              itemNumber = "2" />
     </etfs>
     <bonds>
         <!-- still empty-->
     </bonds>
-    <cash amount = "3446.60" />
+    <cash amount = "663.07" />
 </entity>
