@@ -1,4 +1,4 @@
-package model;
+package com.telegram.ticketBot.model;
 
 public interface Entity {
 

@@ -1,11 +1,7 @@
-package model;
+package com.telegram.ticketBot.model;
 
-import model.entities.Cash;
-import model.entities.ETF;
-import model.entities.Stock;
-import org.checkerframework.checker.units.qual.A;
 import org.xml.sax.SAXException;
-import service.xmlParsing.XmlParser;
+import com.telegram.ticketBot.service.xmlParsing.XmlParser;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;

@@ -1,9 +1,9 @@
-package service.xmlParsing;
+package com.telegram.ticketBot.service.xmlParsing;
 
-import model.entities.Bond;
-import model.entities.Cash;
-import model.entities.ETF;
-import model.entities.Stock;
+import com.telegram.ticketBot.model.entities.Bond;
+import com.telegram.ticketBot.model.entities.Cash;
+import com.telegram.ticketBot.model.entities.ETF;
+import com.telegram.ticketBot.model.entities.Stock;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;

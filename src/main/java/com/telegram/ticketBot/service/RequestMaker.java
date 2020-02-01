@@ -1,4 +1,4 @@
-package service;
+package com.telegram.ticketBot.service;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;

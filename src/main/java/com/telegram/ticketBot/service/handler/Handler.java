@@ -1,14 +1,14 @@
-package service.handler;
+package com.telegram.ticketBot.service.handler;
 
-import exceptions.UncorrectInputDataException;
-import model.Command;
-import model.Entity;
-import model.SingletonList;
-import model.entities.Cash;
-import model.entities.ETF;
-import model.entities.Stock;
-import service.RequestMaker;
-import service.ViewMaker;
+import com.telegram.ticketBot.exceptions.UncorrectInputDataException;
+import com.telegram.ticketBot.model.Command;
+import com.telegram.ticketBot.model.Entity;
+import com.telegram.ticketBot.model.SingletonList;
+import com.telegram.ticketBot.model.entities.Cash;
+import com.telegram.ticketBot.model.entities.ETF;
+import com.telegram.ticketBot.model.entities.Stock;
+import com.telegram.ticketBot.service.RequestMaker;
+import com.telegram.ticketBot.service.ViewMaker;
 
 import java.util.ArrayList;
 import java.util.HashMap;

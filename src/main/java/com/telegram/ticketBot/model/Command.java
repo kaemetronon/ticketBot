@@ -1,4 +1,4 @@
-package model;
+package com.telegram.ticketBot.model;
 
 public enum Command {
     STOCKS, ETFS, BONDS, CASH, ALL, LIST,

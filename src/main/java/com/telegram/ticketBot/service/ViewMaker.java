@@ -1,6 +1,6 @@
-package service;
+package com.telegram.ticketBot.service;
 
-import model.Entity;
+import com.telegram.ticketBot.model.Entity;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;

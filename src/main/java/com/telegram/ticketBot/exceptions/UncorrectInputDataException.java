@@ -1,4 +1,4 @@
-package exceptions;
+package com.telegram.ticketBot.exceptions;
 
 public class UncorrectInputDataException extends RuntimeException {
 

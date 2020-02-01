@@ -1,4 +1,4 @@
-package service.handler;
+package com.telegram.ticketBot.service.handler;
 
 public class Calculator {
 

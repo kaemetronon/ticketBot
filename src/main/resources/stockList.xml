@@ -21,7 +21,7 @@
         <etf title = "FXGD"
              url = "https://www.investing.com/etfs/finex-physically-held-gold-usd"
              buyCourse = "684.3"
-             itemNumber = "2" />
+             itemNumber = "6" />
     </etfs>
     <bonds>
         <!-- still empty-->

@@ -1,6 +1,6 @@
-package model.entities;
+package com.telegram.ticketBot.model.entities;
 
-import model.Entity;
+import com.telegram.ticketBot.model.Entity;
 
 public class Bond implements Entity {
     @Override
